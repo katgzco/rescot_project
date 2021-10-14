@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # 3rd Api
     'rest_framework',
-    'corsheaders',
+    'phonenumber_field',
 
     # Local
     'api_quotation.apps.ApiQuotationConfig',
@@ -58,11 +58,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'http://localhost:8000',
-)
+#CORS_ORIGIN_ALLOW_ALL = False
+#CORS_ORIGIN_WHITELIST = (
+#    'http://localhost:3000',
+#    'http://localhost:8000',
+#)
 
 
 ROOT_URLCONF = 'rescot.urls'
@@ -132,6 +132,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+PHONENUMBER_DEFAULT_REGION = 'CO'
 
 
 # Static files (CSS, JavaScript, Images)
