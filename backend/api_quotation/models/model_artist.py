@@ -1,11 +1,11 @@
 """[summary]
 """
 
-from django.db import models
-from django.db.models.fields import CharField, EmailField
-from . import BaseModel
-from .model_quotation import Quotation
 from phonenumber_field.modelfields import PhoneNumberField
+from django.db.models.fields import CharField, EmailField
+from .model_quotation import Quotation
+from .model_basemodel import BaseModel
+from django.db import models
 
 
 class Artist(BaseModel):
@@ -21,10 +21,10 @@ class Artist(BaseModel):
     phone = PhoneNumberField(blank=False)
     address = models.CharField(max_length=50, blank=False)
     fk_quotation = models.ForeignKey(
-        Quotation, related_name='artist', on_delete=models.CASCADE)
+        Quotation, related_name='artist', on_delete=models.CASCADE, default='')
 
     class Meta:
         app_label = 'api_quotation'
 
     def __str__(self):
-        return f'{self.name} _ {self.mail} _ {self.phone} _ {self.address}'
+        return f'{self.name} _ {self.lastname} _ {self.mail} _ {self.phone} _ {self.address}'
