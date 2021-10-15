@@ -27,7 +27,7 @@
       class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#main">
           <img
             src="images/logo/logo-sin-fondo/logo 200x100px.png"
             alt="Logo rescot"
@@ -53,10 +53,13 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#place-time">Lugar y fecha</a>
+              <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#orador">Oradores</a>
+              <a class="nav-link" href="#demo">Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#team">Team</a>
@@ -65,12 +68,9 @@
               <a class="nav-link text-rescot" href="#">Proyecto</a>
             </li>
           </ul>
-          <!--
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <a class="nav-link btn btn-rescot my-2 my-sm-0" href="#sign-up">Sign Up</a>
           </form>
-          -->
         </div>
       </div>
     </nav>
@@ -102,35 +102,6 @@
             />
           </div>
         </div>
-        <!--<div class="overlay">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center text-md-left">
-                <h1>Rescot</h1>
-                <h3>Free your time!</h3>
-                <p class="d-none d-md-block">
-                  Llega una nueva herramienta,facil de usar, con la que puedes
-                  gestionar y automatizar las cotizaciones y el agendamiento de
-                  citas con tus clientes. Libera tu tiempo y atrevete a llevar
-                  tu negocio al siguiente nivel!
-                </p>
-                <a
-                  data-toggle="modal"
-                  data-target="#modal-registro"
-                  class="btn btn-outline-light"
-                  >Registrate</a
-                >
-                <button
-                  tipe="button"
-                  class="btn btn-rescot"
-                  data-toggle="modal"
-                  data-target="#modal-registro"
-                >
-                  Registrate pero con colorcito
-                </button>
-              </div>
-            </div>
-          </div>-->
         </div>
       </div>
     </main>
@@ -139,49 +110,50 @@
     <!-- Signup-->
     <section id="sign-up">
       <div class="container-fluid">
-        <div class="row ">
-          <div class="col-md-5 pt-4" id="title-slogan">
-            <h1>Rescot</h1>
-            <h3>Free your time!</h3>
-            <p>
-              Llega una nueva herramienta,facil de usar, con la que puedes
-              gestionar y automatizar las cotizaciones y el agendamiento de
-              citas con tus clientes. Libera tu tiempo y atrevete a llevar
-              tu negocio al siguiente nivel!
-            </p>
+        <div class="row">
+          <div class="col-12 col-md-6 pt-4" id="title-slogan">
+            <div class="container">
+              <h1>Rescot</h1>
+              <h3>Free your time!</h3>
+              <p>
+                Llega una nueva herramienta,facil de usar, con la que puedes
+                gestionar y automatizar las cotizaciones y el agendamiento de
+                citas con tus clientes. Libera tu tiempo y atrevete a llevar
+                tu negocio al siguiente nivel!
+              </p>
+            </div>
           </div>
-          <div class="col-md-7 pt-4 pb-4" >
-            <div class="ml-md-5 mr-md-5" id="form-sing-up">
-            <form class="ml-md-5 mr-md-5">
-              <div class="form-group ">
-                <input type="text" class="form-control"" id="user-name" placeholder="Create a user name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" pattern=".+@.+\.com" placeholder="Enter your email" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-                <input type="tel" class="form-control" id="phone-number" pattern="3.+" minlength="10" maxlength="10" placeholder="Enter your phone number" required>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="password" minlength="8" placeholder="Create a password" required>
-              </div>
-              <button type="submit" class="btn btn-rescot btn-block">Sign Up</button>
-            </form>
-          </div>
+          <div class="col-12 col-md-6 mt-3" id="form-sing-up" >
+            <div class="container">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control"" id="user-name" placeholder="Create a user name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" pattern=".+@.+\.com" placeholder="Enter your email" required>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control" id="phone-number" pattern="3.+" minlength="10" maxlength="10" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="password" minlength="8" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="btn btn-rescot btn-block">Sign Up</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <hr>
     </section>
     <!-- End Signup-->
     <!--Features-->
-    <section id="features">
+    <section id="features" class="mt-4">
       <div class="container">
-        <div class="row mt-2">
+        <div class="row">
           <div class="col text-center text-uppercase">
-            <small>Nuestros</small>
-            <h2>Beneficios</h2>
+            <small>Nuestras</small>
+            <h2>Soluciones</h2>
           </div>
         </div>
         <!--Cards-->
@@ -215,7 +187,6 @@
     </section>
 
     <!--End Features-->
-    <hr>
     <!--Demo-->
     <section id="demo" class="pt-3">
       <div class="row mt-2">
@@ -231,7 +202,8 @@
       </div>
     </section>
     <!-- End Demo-->
-    <section id="motivacion" class="pt-3">
+    <!--Motivacion-->
+    <section id="about" class="pt-3">
       <div class="row mt-2">
         <div class="col text-center text-uppercase">
           <small>Motivacion</small>
@@ -244,98 +216,7 @@
         </div>
       </div>
     </section>
-    <!--Motivacion->
     <!--End motivacion-->
-    <!--Fecha y lugar
-    <section id="place-time">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-lg-6 pl-0 pr-0">
-            <img src="images/logo/Logo-fondo/4-fondo.png" alt="logo" />
-          </div>
-          <div class="col-12 col-lg-6 pt-4 pb-4">
-            <h2>Lugar y fecha</h2>
-            <p>
-              Nunc quis libero ligula. Donec non enim quam. Nulla aliquet ligula
-              sit amet risus consectetur, vel mattis felis blandit. Nunc ac orci
-              faucibus, hendrerit lectus ut, scelerisque metus. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Nulla at est magna.
-              Pellentesque efficitur accumsan mauris in congue. Ut bibendum eros
-              nibh, sit amet pharetra ex pellentesque rutrum.
-            </p>
-            <a class="btn btn-outline-light" href="#">Conocemas</a>
-          </div>
-        </div>
-      </div>
-    </section>-->
-    <!--End Fecha y lugar-->
-
-    <!-- Orador 
-    <section id="orador" class="pt-2 pb-3">
-      <div class="container">
-        <div class="row">
-          <div class="col text-uppercase text-center">
-            <small>Conviertete en un</small>
-            <h2>Orador</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-center">
-            Anotate como orador para dar una
-            <abbr
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Charlas de 5 minutos"
-              >charla ignite</abbr
-            >. cuentanos deque quieres hablar.
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-            <!-- Fomulario inscripcion
-            <form>
-              <div class="form-row">
-                <div class="form-group col-12 col-md-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nombre"
-                  />
-                </div>
-                <div class="form-group col-12 col-md-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Apellido"
-                  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <textarea
-                    name="text"
-                    class="form-control form-control-lg"
-                    placeholder="Sobre que quieres hablar"
-                  ></textarea>
-                  <small class="form-text text-muted">
-                    Recuerda incluir un titulo para tu charla.
-                  </small>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col">
-                  <button type="button" class="btn btn-block btn-rescot">
-                    Enviar
-                  </button>
-                </div>
-              </div>
-            </form>
-            <!-- end Fomulario inscripcion
-          </div>
-        </div>
-      </div>
-    </section>-->
-    <!--end orador-->
 
     <!-- Team -->
     <section id="team" class="mt-4">
