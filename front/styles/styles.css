@@ -1,0 +1,104 @@
+/* colors:
+#41c1ba
+#365b6d
+#f7f7f7
+*/
+
+.text-rescot {
+  color: #41c1ba !important;
+}
+
+.btn-rescot {
+  background-color: #41c1ba;
+  color: #f7f7f7;
+}
+
+.btn-rescot:hover {
+  background-color: #365b6d;
+  color: #41c1ba;
+}
+
+#header img {
+  width: 150px;
+}
+
+#main .carousel-inner img {
+  max-height: 80vh;
+  object-fit: cover;
+  filter: grayscale(0%);
+}
+#carrousel {
+  position: relative;
+}
+
+#carrousel .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#carrousel .overlay .container,
+#carrousel .overlay .row {
+  height: 100%;
+}
+/*sigUp*/
+
+#title-slogan {
+  background: -webkit-linear-gradient(#41c1ba, #365b6d);
+  color: #f7f7f7;
+  box-shadow: inset 0 0 10px 0 #41c1ba;
+}
+
+#form-sing-up input {
+  box-shadow: 0 0 10px 0 #41c1ba;
+  border-radius: 0 10px 0 10px;
+  border: 0;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  box-shadow: 0 1px 5px 1px #41c1ba;
+}
+/*motivacion*/
+#motivacion {
+  background-color: #1c3643;
+  text-align: center;
+}
+#motivacion {
+  background-color: #1c3643;
+  text-align: center;
+}
+/*footer*/
+#footer {
+  background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+}
+
+#footer a {
+  color: white;
+}
+
+/*#team {
+  background-color: #365b6d;
+}*/
+
+.card {
+  border: 0;
+}
+
+#bootstrap {
+  background-color: #553c7b !important;
+}
+
+#place-time {
+  background-color: #365b6d;
+  color: #f7f7f7;
+}
+
+#place-time img {
+  max-width: 100%;
+}
