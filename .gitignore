@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# vs
+.vscode
+
+#node
+node_modules
+sass
+package*
+
