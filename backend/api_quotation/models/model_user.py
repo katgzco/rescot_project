@@ -15,15 +15,12 @@ class User(BaseModel):
         BaseModel ([type]): [description]
     """
 
-    name = models.CharField(max_length=50, blank=False)
-    lastname = models.CharField(max_length=50, blank=False)
-    mail = models.EmailField(max_length=254, blank=False)
-    phone = PhoneNumberField(blank=False)
+    name = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+    mail = models.EmailField(max_length=254)
+    phone = PhoneNumberField()
     fk_quotation = models.OneToOneField(
-        Quotation, related_name='user', on_delete=models.CASCADE, primary_key=True, default='')
+        Quotation, related_name='user', on_delete=models.CASCADE, default='')
 
     class Meta:
         app_label = 'api_quotation'
-
-    def __str__(self):
-        return f'{self.name} _ {self.lastname} _ {self.mail} _ {self.phone}'
