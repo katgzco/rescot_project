@@ -14,12 +14,9 @@ class Body(BaseModel):
         BaseModel ([type]): [description]
     """
 
-    name = models.CharField(max_length=50, blank=False)
-    difficulty = models.CharField(max_length=50, blank=False)  # Cambiar esto
+    name = models.CharField(max_length=50)
+    difficulty = models.IntegerField()
     fk_artist = models.ManyToManyField(Artist)
 
     class Meta:
         app_label = 'api_quotation'
-
-    def __str__(self):
-        return f'{self.name} _ {self.difficulty}'

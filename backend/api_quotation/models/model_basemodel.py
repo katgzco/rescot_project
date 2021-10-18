@@ -18,7 +18,9 @@ class BaseModel(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        abstract = True
         app_label = 'api_quotation'
 
     def __str__(self):
-        return f'{self.id} _ {self.created_at} _ {self.updated_at}'
+        return "[{}] ({}) {}".format(
+            type(self).__name__, self.id, self.__dict__)

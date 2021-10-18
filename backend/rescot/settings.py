@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # 3rd Api
     'rest_framework',
     'phonenumber_field',
+    'djmoney',
 
     # Local
     'api_quotation.apps.ApiQuotationConfig',
