@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./css/custom.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>ResCot - Quotation</title>
+  </head>
+  <body id="body-quotation">
+    <div class="container d-flex flex-column">
+      <div class="row align-items-center justify-content-center g-0
+          min-vh-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xxl-4 py-8 py-xl-0">
+          <!-- Card -->
+          <div class="card smooth-shadow-md" id="card-quotation">
+            <!-- Card body -->
+            <div class="card-body p-6">
+              <div class="mb-4">
+                <h1 class="text-center">Quotation</h1>
+              </div>
+              <!-- Form -->
+              <form>
+                <!--Artist infomation-->
+                <h6 class="mb-2">Artist information</h6>
+                <div class="mb-3">
+                  <div class="row">
+                    <div class="col mb-1">
+                      <label for="name" class="pb-0">Name</label>
+                      <input type="text" id="name"class="form-control form-control-sm" value="Angelica Aradiam" placeholder="First name" aria-label="First name" readonly>
+                    </div>
+                    <div class="col mb-1">
+                      <label for="whatsapp" class="pb-0">WhatsApp</label>
+                      <input type="text" id="whatsapp" class="form-control form-control-sm" value="3589602525" placeholder="Last name" aria-label="Last name" readonly>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col mb-3">
+                      <label for="address" class="pb-0">Address</label>
+                      <input type="text" class="form-control form-control-sm" id="address" value="Punky Bambi - Envigado" placeholder="Address" aria-label="Address" readonly>
+                    </div>
+                  </div>
+                </div>
+                <!-- User Information -->
+                <h6 class="mb-2">Personal Information</h6>
+                <div class="col mb-2">
+                  <label for="username" class="pb-0">Name</label>
+                  <input type="text" class="form-control" id="username" placeholder="Your Name">
+                </div>
+                <!-- phone number -->
+                <div class="col mb-2">
+                  <label for="userphone" class="pb-0">WhatsApp</label>
+                  <input type="tel" class="form-control" id="userphone" pattern="3.+" minlength="10" maxlength="10" placeholder="3998887744">
+
+                  <small id="emailHelp" class="form-text text-muted ">We'll never share your phone-number with anyone else.</small>
+                </div>
+                <!-- Email -->
+                <div class="col mb-3">
+                  <label for="useremail" class="pb-0">Email</label>
+                  <input type="email" class="form-control" id="useremail"  pattern=".+@.+\.com" placeholder="name@example.com">
+                  <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
+                </div>
+                <!--Quotation Information-->
+                <h6 class="mb-2">Quotation Information</h6>
+                <div class="mb-3">
+                  <div class="row">
+                    <div class="col mb-3">
+                      <!--Styles-->
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected disabled>Styles</option>
+                        <option value="1">Color</option>
+                        <option value="2">Blackwork</option>
+                        <option value="3">Traditional & Old School</option>
+                        <option value="3">Neo Traditional</option>
+                        <option value="3">Watercolor</option>
+                        <option value="3">Realism Color</option>
+                        <option value="3">Realism Black and Grey</option>
+                      </select>
+                    </div>
+                    <div class="col mb-3">
+                       <!--Styles-->
+                       <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected disabled>Body part</option>
+                        <option value="1">Color</option>
+                        <option value="2">Blackwork</option>
+                        <option value="3">Traditional & Old School</option>
+                        <option value="3">Neo Traditional</option>
+                        <option value="3">Watercolor</option>
+                        <option value="3">Realism Color</option>
+                        <option value="3">Realism Black and Grey</option>
+                      </select>
+                    </div>
+                    <div class="col mb-3">
+                      <!--Styles-->
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected disabled>Size</option>
+                        <option value="1-7">1-7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25-30">25-30</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mb-3">
+                      <label for="formFileMultiple" class="form-label">Reference images</label>
+                      <input class="form-control" type="file" id="formFileMultiple" multiple>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Description of the tattoo</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </div>
+                <!-- Checkbox -->
+                <div class="mb-3">
+                  <div class="form-check custom-checkbox">
+                    <input type="checkbox" class="form-check-input" id="agreeCheck">
+                    <label class="form-check-label" for="agreeCheck"><span class="fs-5">I agree to the <a href="terms-condition-page.html">Terms of
+                            Service </a>and
+                          <a href="terms-condition-page.html">Privacy Policy.</a></span></label>
+                  </div>
+                </div>
+                <div>
+                  <!-- Button -->
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                      Make quote
+                    </button>
+                  </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -77,3 +77,77 @@ button {
 #bootstrap {
   background-color: #553c7b !important;
 }
+
+/*quotation*/
+
+#main-quotation img {
+  max-height: 100vh;
+  object-fit: cover;
+  filter: grayscale(30%);
+}
+
+#main-quotation {
+  position: relative;
+}
+
+#main-quotation .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #41c1bb57;
+  color: white;
+}
+
+#main-quotation .overlay .container,
+#main-quotation .overlay .row {
+  height: 100%;
+}
+
+#main-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-quotation {
+  position: absolute;
+  background-color: #365b6d8f;
+  width: 120px;
+}
+
+#body-quotation {
+  background-image: url(/front/images/fondo-cotizacion.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#card-quotation {
+  background-color: #f7f7f7b6;
+}
+
+#card-quotation input,
+#card-quotation select,
+#card-quotation textarea {
+  box-shadow: 0 0 10px 0 #41c1ba;
+  background-color: #ffffffc9;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+#card-quotation label {
+  font-size: small;
+  color: #365b6d;
+  font-style: italic;
+  font-weight: 500;
+}
+
+#card-quotation h6 {
+  font-size: larger;
+  color: #4e5355;
+}
+#card-quotation h1 {
+  color: #4e5355;
+}
