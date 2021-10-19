@@ -15,8 +15,7 @@ class User(BaseModel):
         BaseModel ([type]): [description]
     """
 
-    name = models.CharField(max_length=50)
-    lastname = models.CharField(max_length=50)
+    name = models.CharField(max_length=250)
     mail = models.EmailField(max_length=254)
     phone = PhoneNumberField()
     fk_quotation = models.OneToOneField(
