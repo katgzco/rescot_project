@@ -16,7 +16,7 @@ class Styles(BaseModel):
 
     name = models.CharField(max_length=50)
     time_cm2 = models.IntegerField()
-    price_cm2 = models.IntegerField()
+    price_cm2 = models.IntegerField() # money field
     fk_artist = models.ManyToManyField(Artist)
 
     class Meta:

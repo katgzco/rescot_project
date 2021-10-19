@@ -16,7 +16,7 @@ class Artist(BaseModel):
     """
 
     name = models.CharField(max_length=50)
-    lastname = models.CharField(max_length=50, default='')
+    lastname = models.CharField(max_length=50, default='') # Delete field
     mail = models.EmailField(max_length=254)
     phone = PhoneNumberField(blank=False)
     address = models.CharField(max_length=50)
