@@ -19,11 +19,14 @@
     <div class="container d-flex flex-column">
       <div class="row align-items-center justify-content-center g-0
           min-vh-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xxl-4 py-8 py-xl-0">
+        <div class="col-12 col-md-10 col-lg-8 col-xxl-4 py-8 py-xl-0">
           <!-- Card -->
           <div class="card smooth-shadow-md" id="card-quotation">
             <!-- Card body -->
             <div class="card-body p-6">
+              <div class="bd-example">
+                <a class="btn btn-sm btn-outline-rescot fst-italic" href="/front/index.html">Home</a>
+              </div>
               <div class="mb-4">
                 <h1 class="text-center">Quotation</h1>
               </div>
@@ -31,42 +34,34 @@
               <form>
                 <!--Artist infomation-->
                 <h6 class="mb-2">Artist information</h6>
-                <div class="mb-3">
-                  <div class="row">
-                    <div class="col mb-1">
-                      <label for="name" class="pb-0">Name</label>
-                      <input type="text" id="name"class="form-control form-control-sm" value="Angelica Aradiam" placeholder="First name" aria-label="First name" readonly>
-                    </div>
-                    <div class="col mb-1">
-                      <label for="whatsapp" class="pb-0">WhatsApp</label>
-                      <input type="text" id="whatsapp" class="form-control form-control-sm" value="3589602525" placeholder="Last name" aria-label="Last name" readonly>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col mb-3">
-                      <label for="address" class="pb-0">Address</label>
-                      <input type="text" class="form-control form-control-sm" id="address" value="Punky Bambi - Envigado" placeholder="Address" aria-label="Address" readonly>
-                    </div>
-                  </div>
+                <div class="mb-3" id="artistInformation">
+                  <!-- artistInfo -->
                 </div>
                 <!-- User Information -->
                 <h6 class="mb-2">Personal Information</h6>
-                <div class="col mb-2">
-                  <label for="username" class="pb-0">Name</label>
-                  <input type="text" class="form-control" id="username" placeholder="Your Name">
-                </div>
-                <!-- phone number -->
-                <div class="col mb-2">
-                  <label for="userphone" class="pb-0">WhatsApp</label>
-                  <input type="tel" class="form-control" id="userphone" pattern="3.+" minlength="10" maxlength="10" placeholder="3998887744">
-
-                  <small id="emailHelp" class="form-text text-muted ">We'll never share your phone-number with anyone else.</small>
-                </div>
-                <!-- Email -->
-                <div class="col mb-3">
-                  <label for="useremail" class="pb-0">Email</label>
-                  <input type="email" class="form-control" id="useremail"  pattern=".+@.+\.com" placeholder="name@example.com">
-                  <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
+                <div class="mb-3" id="userInformation">
+                  <div class="row">
+                    <div class="col mb-2">
+                      <label for="username" class="pb-0">Name</label>
+                      <input type="text" class="form-control" id="userName" placeholder="Your Name" required>
+                    </div>
+                  </div>
+                  <!-- phone number -->
+                  <div class="row">
+                    <div class="col mb-2">
+                      <label for="userphone" class="pb-0">WhatsApp</label>
+                      <input type="tel" class="form-control" id="userPhone" pattern="3.+" minlength="10" maxlength="10" placeholder="3998887744" required>
+                      <small id="emailHelp" class="form-text text-muted ">We'll never share your phone-number with anyone else.</small>
+                    </div>
+                  </div>
+                  <!-- Email -->
+                  <div class="row">
+                    <div class="col mb-3">
+                      <label for="userMail" class="pb-0">Email</label>
+                      <input type="email" class="form-control" id="useremail"  pattern=".+@.+\.com" placeholder="name@example.com">
+                      <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
+                    </div>
+                  </div>
                 </div>
                 <!--Quotation Information-->
                 <h6 class="mb-2">Quotation Information</h6>
@@ -74,34 +69,20 @@
                   <div class="row">
                     <div class="col mb-3">
                       <!--Styles-->
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                        <option selected disabled>Styles</option>
-                        <option value="1">Color</option>
-                        <option value="2">Blackwork</option>
-                        <option value="3">Traditional & Old School</option>
-                        <option value="3">Neo Traditional</option>
-                        <option value="3">Watercolor</option>
-                        <option value="3">Realism Color</option>
-                        <option value="3">Realism Black and Grey</option>
+                      <select id="selectStyle" class="form-select form-select-sm" aria-label="form-select-sm example" required>
+                      <!-- artistRenderStyles -->
                       </select>
                     </div>
                     <div class="col mb-3">
-                       <!--Styles-->
-                       <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                        <option selected disabled>Body part</option>
-                        <option value="1">Color</option>
-                        <option value="2">Blackwork</option>
-                        <option value="3">Traditional & Old School</option>
-                        <option value="3">Neo Traditional</option>
-                        <option value="3">Watercolor</option>
-                        <option value="3">Realism Color</option>
-                        <option value="3">Realism Black and Grey</option>
+                      <!--Body part-->
+                      <select id="selectBody" class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                      <!-- artistRenderBody -->
                       </select>
                     </div>
                     <div class="col mb-3">
                       <!--Styles-->
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                        <option selected disabled>Size</option>
+                      <select id="selectSize"class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                        <option disable hidden value="">Size</option>
                         <option value="1-7">1-7</option>
                         <option value="8">8</option>
                         <option value="9">9</option>
@@ -125,33 +106,26 @@
                   </div>
                   <div class="row">
                     <div class="mb-3">
-                      <label for="formFileMultiple" class="form-label">Reference images</label>
-                      <input class="form-control" type="file" id="formFileMultiple" multiple>
+                      <label for="quotationImage" class="form-label">Reference images</label>
+                      <input class="form-control" type="file" id="quotationImage" multiple>
                     </div>
                   </div>
                   <div class="row">
                     <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Description of the tattoo</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label for="quotationDescription" class="form-label">Description of the tattoo</label>
+                      <textarea class="form-control" id="quotationDescription" rows="3"></textarea>
                     </div>
                   </div>
-                <!-- Checkbox -->
-                <div class="mb-3">
-                  <div class="form-check custom-checkbox">
-                    <input type="checkbox" class="form-check-input" id="agreeCheck">
-                    <label class="form-check-label" for="agreeCheck"><span class="fs-5">I agree to the <a href="terms-condition-page.html">Terms of
-                            Service </a>and
-                          <a href="terms-condition-page.html">Privacy Policy.</a></span></label>
-                  </div>
-                </div>
-                <div>
                   <!-- Button -->
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-rescot" id="makeQuote">
                       Make quote
                     </button>
                   </div>
-                  </div>
+                </div>
+                <h6 class="mb-4 text-center fs-1">Quote Result</h6>
+                <div class="mb-3 px-3" id="quoteResult">
+                  <!-- quoteResult -->
                 </div>
               </form>
             </div>
@@ -160,12 +134,10 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
+    <!-- Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="js/quotation.js"></script>
   </body>
 </html>
