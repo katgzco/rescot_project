@@ -93,6 +93,7 @@
   background-color: #41c1ba;
   color: #365b6d;
   border-bottom: 0px;
+  border-radius: 5px;
 }
 #main-quotation img {
   max-height: 100vh;
