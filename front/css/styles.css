@@ -42,7 +42,7 @@
 }
 
 #form-sing-up input,
-button {
+#form-sing-up button {
   box-shadow: 0 0 10px 0 #41c1ba;
   border-radius: 0 10px 0 10px;
   border: 0;
@@ -80,6 +80,20 @@ button {
 
 /*quotation*/
 
+.btn-outline-rescot {
+  background-color: none;
+  border-color: #41c1ba;
+  color: #41c1ba;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+}
+.btn-outline-rescot:hover {
+  background-color: #41c1ba;
+  color: #365b6d;
+  border-bottom: 0px;
+}
 #main-quotation img {
   max-height: 100vh;
   object-fit: cover;
@@ -150,4 +164,9 @@ button {
 }
 #card-quotation h1 {
   color: #4e5355;
+}
+
+#quoteResult {
+  background-color: #1c364357;
+  border-radius: 0 15px 0 15px;
 }

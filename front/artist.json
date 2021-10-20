@@ -1,0 +1,28 @@
+[
+  {
+      "id": "a40dbd02-ad9e-4bbc-b505-c3193a6a2b0c",
+      "created_at": "2021-10-19T15:01:35.095461Z",
+      "updated_at": "2021-10-19T15:01:35.095479Z",
+      "name": "kat",
+      "lastname": "Gomez",
+      "mail": "123@gmail.com",
+      "phone": "0123456789",
+      "address": "calle por ahi",
+      "fk_quotation": "e2e62b82-3b0a-4549-8564-3d152a21a1c6",
+      "styles" : ["Color", "Blackwork", "Traditional & Old School", "Watercolor"],
+      "body": ["Brazo", "Antebrazo", "costillas", "cuello", "Pierna"]
+  },
+  {
+    "id": "ew0dbd02-ad9e-4bbc-b505-c3193a6arty6",
+    "created_at": "2021-10-19T15:01:35.095461Z",
+    "updated_at": "2021-10-19T15:01:35.095479Z",
+    "name": "Vanessa",
+    "lastname": "Garcia",
+    "mail": "vagava.123@gmail.com",
+    "phone": "3202440186",
+    "address": "Campo valdes",
+    "fk_quotation": "v8v61f23-3b0a-4549-8564-3d152a21s8h6",
+    "styles" : ["Realism Color", "Realism Black and Grey", "Watercolor"],
+    "body": ["Brazo", "Antebrazo", "Pierna"]
+}
+]
