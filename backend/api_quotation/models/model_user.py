@@ -4,7 +4,6 @@
 from phonenumber_field.modelfields import PhoneNumberField
 from django.db.models.fields import CharField, EmailField
 from .model_basemodel import BaseModel
-from .model_quotation import Quotation
 from django.db import models
 
 
@@ -18,8 +17,6 @@ class User(BaseModel):
     name = models.CharField(max_length=250)
     mail = models.EmailField(max_length=254)
     phone = PhoneNumberField()
-    fk_quotation = models.OneToOneField(
-        Quotation, related_name='user', on_delete=models.CASCADE, default='')
 
     class Meta:
         app_label = 'api_quotation'

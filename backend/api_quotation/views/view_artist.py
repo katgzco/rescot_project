@@ -1,7 +1,11 @@
 from api_quotation.serializations.serializer_artist import ArtistsSerializer
 from api_quotation.serializations.serializer_quotation import QuotationSerializer
 from api_quotation.serializations.serializer_user import UserSerializer
+from api_quotation.serializations.serializer_style import StyleSerializer
+from api_quotation.serializations.serializer_body import BodySerializer
 from api_quotation.models.model_artist import Artist
+from api_quotation.models.model_body import Body
+from api_quotation.models.model_styles import Styles
 from api_quotation.models.model_quotation import Quotation
 from api_quotation.models.model_user import User
 from rest_framework.parsers import JSONParser
@@ -29,13 +33,22 @@ def artist_by_id(request, pk):
                             )
     if request.method == 'GET':
         artist_serializer = ArtistsSerializer(artist)
-        return JsonResponse(artist_serializer.data)
+        full_dict = artist_serializer.data
+
+        styles = Styles.objects.filter(fk_artist=pk).values_list('name', flat=True)
+        styles_list = [style for style in styles]
+        full_dict['styles'] = styles_list
+
+        body_parts = Body.objects.filter(fk_artist=pk).values_list('name', flat=True)
+        body_list = [body_part for body_part in body_parts]
+        full_dict['body_part'] = body_list
+
+        return JsonResponse(full_dict)
 
 @api_view(['GET'])
 def quotes_by_artist(request, pk):
     try:
-        quotation = Quotation.objects.filter(artist__id=pk)
-        print(quotation)
+        quotation = Quotation.objects.filter(fk_artist==pk)
     except Quotation.DoesNotExist:
         return JsonResponse(
                             {'message': 'The quotation does not exist'},
