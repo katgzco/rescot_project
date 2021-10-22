@@ -44,11 +44,11 @@ class Quotation(BaseModel):
     def time_estimator(self):
         cm2 = self.size
         if cm2 <= 7:
-            estimated_time = ["1"]
+            estimated_time = '1 hora'
         elif cm2 <= 15:
-            estimated_time = ["3", "4"]
+            estimated_time = 'Entre 3 y 4 horas'
         else:
-            estimated_time = ["5", "6"]
+            estimated_time = 'Entre 5 y 6 horas'
 
         return str(estimated_time)
 

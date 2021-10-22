@@ -46,19 +46,15 @@ def quote_creation(request):
                                 status=status.HTTP_404_NOT_FOUND
                                 )
         artist_query = Artist.objects.get(pk=artist_id)
-#        print(request.data['quotation'])
         quotation_serializer = QuotationSerializer(data=request.data['quotation'])
         user_serializer = UserSerializer(data=request.data['user'])
-#        print(quotation_serializer)
-#        dict_2 = dict()
+
         try:
             user_serializer.is_valid(raise_exception=True )
             quotation_serializer.is_valid(raise_exception=True )
         except:
             return JsonResponse(
-#                            dict_2,
-                            quotation_serializer.errors,
-                            user_serializer.errors,
+                            {'message': 'Bad request, check the way you are sending the information'},
                             status=status.HTTP_400_BAD_REQUEST,
                             safe=False
                             )
