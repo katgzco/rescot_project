@@ -5,4 +5,4 @@ class QuotationSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Quotation
-		fields = ['id', 'size', 'body_part', 'style', 'fk_artist', 'fk_user']
+		fields = ['id', 'size', 'body_part', 'style', 'description','fk_artist', 'fk_user']

@@ -15,7 +15,7 @@ class Body(BaseModel):
     """
 
     name = models.CharField(max_length=50)
-    difficulty = models.IntegerField()
+    difficulty = models.DecimalField(max_digits = 3 , decimal_places = 2)
     fk_artist = models.ManyToManyField(Artist)
 
     class Meta:

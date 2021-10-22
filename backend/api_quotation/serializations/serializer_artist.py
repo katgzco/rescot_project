@@ -8,4 +8,4 @@ class ArtistsSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Artist
-		fields = ['id', 'name', 'lastname', 'mail', 'phone', 'address']
+		fields = ['id', 'name', 'mail', 'phone', 'address']

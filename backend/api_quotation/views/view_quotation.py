@@ -46,19 +46,30 @@ def quote_creation(request):
                                 status=status.HTTP_404_NOT_FOUND
                                 )
         artist_query = Artist.objects.get(pk=artist_id)
-
+#        print(request.data['quotation'])
         quotation_serializer = QuotationSerializer(data=request.data['quotation'])
         user_serializer = UserSerializer(data=request.data['user'])
-        if user_serializer.is_valid() and quotation_serializer.is_valid():
-            user_obj = user_serializer.save()
-            quotation_serializer.save(fk_user=user_obj, fk_artist=artist_query)
-            dict_ = {"price_bycm2" : 34, "time_bycm2" : 1}
+#        print(quotation_serializer)
+#        dict_2 = dict()
+        try:
+            user_serializer.is_valid(raise_exception=True )
+            quotation_serializer.is_valid(raise_exception=True )
+        except:
+            return JsonResponse(
+#                            dict_2,
+                            quotation_serializer.errors,
+                            user_serializer.errors,
+                            status=status.HTTP_400_BAD_REQUEST,
+                            safe=False
+                            )
+        else:
+            user_instance = user_serializer.save()
+            quotation_instance = quotation_serializer.save(fk_user=user_instance, fk_artist=artist_query)
+            time_cm2 = quotation_instance.time_estimator()
+            price_cm2 = quotation_instance.price_estimator(artist_id)
+            dict_ = {"price" : price_cm2, "time" : time_cm2}
             return JsonResponse(
                                 dict_,
                                 status=status.HTTP_201_CREATED,
                                 safe=False
                                 )
-        return JsonResponse(
-                            quotation_serializer.errors,
-                            status=status.HTTP_400_BAD_REQUEST
-                            )
