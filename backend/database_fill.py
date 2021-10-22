@@ -6,31 +6,40 @@ from api_quotation.models.model_body import Body
 from api_quotation.models.model_styles import Styles
 
 
-quotation1 = Quotation(size='10', body_part='cuello',
-                       style='black work', total_time=20, total_price=3)
-quotation1.save()
-
 artist1 = Artist(
-    name='kat',
-    lastname='Gomez',
+    name='Angelica lavidum',
     mail='123@gmail.com',
-    phone='0123456789',
-    address='calle por ahi',
-    fk_quotation=quotation1
+    phone='3146624567',
+    address='Envigado',
 )
 artist1.save()
 
-user1 = User(name='Mateo Londono', mail='mat@gmail.com',
-             phone='0123456789', fk_quotation=quotation1)
-user1.save()
 
-styles1 = Styles(name='black', time_cm2=10, price_cm2=500)
+styles1 = Styles(name='black', price_cm2=26000)
 styles1.save()
 styles1.fk_artist.set([artist1])
 
-body1 = Body(name='cuello', difficulty='2')
+styles2 = Styles(name='color', price_cm2=31500)
+styles2.save()
+styles2.fk_artist.set([artist1])
+
+body1 = Body(name='brazo', difficulty='1.3')
 body1.save()
 body1.fk_artist.set([artist1])
+
+body2 = Body(name='antebrazo', difficulty='1.5')
+body2.save()
+body2.fk_artist.set([artist1])
+
+# quotation1 = Quotation(size='10', body_part='brazo',
+#                        style='black')
+# quotation1.save()
+
+
+
+# user1 = User(name='Mateo Londono', mail='mat@gmail.com',
+#              phone='0123456789', fk_quotation=quotation1)
+# user1.save()
 
 # """ QUERIES """
 
@@ -38,8 +47,7 @@ body1.fk_artist.set([artist1])
 #                        style='neotraditional', total_time=0, total_price=0)
 # quotation2.save()
 
-# artist1 = artist1 = Artist(name='kat', lastname='Gomez', mail='123@gmail.com', phone='0123456789',
-#                            address='calle por ahi', fk_quotation=quotation1)
+# artist1 = artist1 = Artist(name='kat', mail='123@gmail.com', phone='0123456789', address='San Luis')
 # artist1.save()
 
 # new_artist = quotation2.artist.create(name='Fabrizio', lastname='Maurizi', mail='fbm@gmail.com', phone='010646469',
@@ -68,3 +76,24 @@ body1.fk_artist.set([artist1])
 
 # Quotation.objects.filter(artist__name='Fabrizio')
 # # <QuerySet [<Quotation: [Quotation] (0be1a457-d7cd-44a3-af84-9583d46d1c2b) {'_state': <django.db.models.base.ModelState object at 0x7fdf7c1c7a90>, 'id': UUID('0be1a457-d7cd-44a3-af84-9583d46d1c2b'), 'created_at': datetime.datetime(2021, 10, 16, 17, 17, 59, 379870, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 10, 16, 17, 17, 59, 379927, tzinfo=<UTC>), 'size': 50, 'body_part': 'back', 'style': 'neotraditional', 'total_time': 0, 'total_price': Decimal('0.00')}>]>
+
+
+
+#PRUEBA POST PARA POSTMAN
+# { 
+#     "artist_id": { 
+#         "id" : "02de5769-9926-41d5-9a6e-afe207911ed6"
+#     }, 
+
+#     "user": {
+#         "name": "Kathe test",
+#         "mail": "kathe@gmail.com",
+#         "phone": "3146614389"
+#         },
+#     "quotation": {
+#         "style": "black",
+#         "body_part": "brazo",
+#         "size": "26",
+#         "description": "Quiero algo bien bonito" 
+#         }
+#     } 

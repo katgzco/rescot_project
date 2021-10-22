@@ -50,20 +50,26 @@ def quote_creation(request):
         quotation_serializer = QuotationSerializer(data=request.data['quotation'])
         user_serializer = UserSerializer(data=request.data['user'])
 #        print(quotation_serializer)
-        if quotation_serializer.is_valid() and user_serializer.is_valid():
+#        dict_2 = dict()
+        try:
+            user_serializer.is_valid(raise_exception=True )
+            quotation_serializer.is_valid(raise_exception=True )
+        except:
+            return JsonResponse(
+#                            dict_2,
+                            quotation_serializer.errors,
+                            user_serializer.errors,
+                            status=status.HTTP_400_BAD_REQUEST,
+                            safe=False
+                            )
+        else:
             user_instance = user_serializer.save()
             quotation_instance = quotation_serializer.save(fk_user=user_instance, fk_artist=artist_query)
             time_cm2 = quotation_instance.time_estimator()
             price_cm2 = quotation_instance.price_estimator(artist_id)
-
             dict_ = {"price" : price_cm2, "time" : time_cm2}
             return JsonResponse(
                                 dict_,
                                 status=status.HTTP_201_CREATED,
                                 safe=False
                                 )
-        return JsonResponse(
-                            quotation_serializer.errors,
-#                            user_serializer.errors,
-                            status=status.HTTP_400_BAD_REQUEST
-                            )

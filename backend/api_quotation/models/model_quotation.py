@@ -44,13 +44,13 @@ class Quotation(BaseModel):
     def time_estimator(self):
         cm2 = self.size
         if cm2 <= 7:
-            estimated_time = str(1,)
+            estimated_time = ["1"]
         elif cm2 <= 15:
-            estimated_time = str(3, 4)
+            estimated_time = ["3", "4"]
         else:
-            estimated_time = str(5, 6)
+            estimated_time = ["5", "6"]
 
-        return estimated_time
+        return str(estimated_time)
 
     def price_estimator(self, artist_id):
         cm2 = self.size
@@ -60,14 +60,14 @@ class Quotation(BaseModel):
         if cm2 <= 7:
 
             if style == 'black':
-                price = 180,000
+                price = 180000
 
             if style == 'color':
-                price = 220,000
+                price = 220000
         else:
 
-            artist_style = Styles.objects.filter(fk_artist__id = artist_id, name = style)
-            body_difficulty = Body.objects.filter(fk_artist__id = artist_id, name = body_part)
-            price = artist_style.price_cm2 * cm2 * body_difficulty.difficulty
+            price_style = Styles.objects.filter(fk_artist__id = artist_id, name = style).values('price_cm2')
+            body_difficulty = Body.objects.filter(fk_artist__id = artist_id, name = body_part).values('difficulty')
+            price = float(price_style[0]['price_cm2']) * float(cm2) * float(body_difficulty[0]['difficulty'])
 
         return str(price)
