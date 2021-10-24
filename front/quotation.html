@@ -42,14 +42,14 @@
                 <div class="mb-3" id="userInformation">
                   <div class="row">
                     <div class="col mb-2">
-                      <label for="username" class="pb-0">Name</label>
+                      <label for="userName" class="pb-0">Name</label>
                       <input type="text" class="form-control" id="userName" placeholder="Your Name" required>
                     </div>
                   </div>
                   <!-- phone number -->
                   <div class="row">
                     <div class="col mb-2">
-                      <label for="userphone" class="pb-0">WhatsApp</label>
+                      <label for="userPhone" class="pb-0">WhatsApp</label>
                       <input type="tel" class="form-control" id="userPhone" pattern="3.+" minlength="10" maxlength="10" placeholder="3998887744" required>
                       <small id="emailHelp" class="form-text text-muted ">We'll never share your phone-number with anyone else.</small>
                     </div>
@@ -58,7 +58,7 @@
                   <div class="row">
                     <div class="col mb-3">
                       <label for="userMail" class="pb-0">Email</label>
-                      <input type="email" class="form-control" id="useremail"  pattern=".+@.+\.com" placeholder="name@example.com">
+                      <input type="email" class="form-control" id="userMail"  pattern=".+@.+\.com" placeholder="name@example.com">
                       <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
                     </div>
                   </div>
@@ -104,12 +104,13 @@
                       </select>
                     </div>
                   </div>
+                  <!--
                   <div class="row">
                     <div class="mb-3">
                       <label for="quotationImage" class="form-label">Reference images</label>
                       <input class="form-control" type="file" id="quotationImage" multiple>
                     </div>
-                  </div>
+                  </div>-->
                   <div class="row">
                     <div class="mb-3">
                       <label for="quotationDescription" class="form-label">Description of the tattoo</label>
@@ -123,10 +124,9 @@
                     </button>
                   </div>
                 </div>
-                <h6 class="mb-4 text-center fs-1">Quote Result</h6>
-                <div class="mb-3 px-3" id="quoteResult">
+                <section id="secctionQuoteResult">
                   <!-- quoteResult -->
-                </div>
+                </section>
               </form>
             </div>
           </div>
