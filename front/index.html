@@ -13,6 +13,9 @@
       rel="stylesheet"
       href="./css/custom.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- Local CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
     <title>ResCot</title>
@@ -34,15 +37,15 @@
         <button
         class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbar"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar"
         aria-controls="navbar"
         aria-expanded="false"
         aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto my-2">
             <li class="nav-item">
               <a class="nav-link" href="#main"
                 >Home<span class="sr-only"></span></a
@@ -61,7 +64,7 @@
               <a class="nav-link" href="#team">Team</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-3 my-lg-0">
             <a class="nav-link btn btn-rescot my-2 my-sm-0" href="quotation.html">Proyecto</a>
           </form>
         </div>
@@ -78,7 +81,7 @@
               <h1 class="darkColor">
                 Automate your quotes.<br></h1>
               <span class="BlueColor text-center fs-3">Free yourself from the scheduling process</span>
-              <p class="fs-5">and free your time</p>
+              <p class="third-text fs-5">and free your time</p>
           </div>
           </div>
           <div class="col-12 col-md-7 p-0">
@@ -128,40 +131,41 @@
     </section>
     <!-- End Signup-->
     <!--Features-->
-    <section id="features">
-      <div class="container">
+    <section id="features" class="py-5">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-12 text-center text-uppercase">
-            <small>Nuestras</small>
-            <h2>Soluciones</h2>
+          <div class="col-12 text-center p-5">
+            <p class="first-text fw-bold fs-1">
+              Accelerate the success <span class="second-text text-center fs-1">of your business</span></p>
           </div>
         </div>
         <!--Cards-->
         <div class="row">
           <div class="col-6 col-md-4">
             <div class="card" >
-              <img class="card-img-top" src="images/calculadora.jpg" alt="calculadora">
+              <img class="card-img-top" src="images/calculadora.png" alt="calculadora">
               <div class="card-body">
-                <h1 class="text-center">Make quotes easy and fast</h1>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h1 class="text-center first-text">Make quotes easy <span class="second-text">and fast</h1></span>
+                <p class="card-text third-text pt-3 fs-5">With an automatic quotation system, <span class="second-text">ResCot</span> allows your customer to quote based on the characteristics of your services in <span class="fw-bold">real time.</span></p>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4">
             <div class="card">
-              <img class="card-img-top rounded" src="images/Agenda.jpg" alt="Agenda">
+              <img class="card-img-top rounded" src="images/calendario.png" alt="Agenda">
               <div class="card-body">
-                <h1 class="text-center">Agenda with few clicks</h1>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h1 class="text-center first-text">Agenda with few <span class="second-text">clicks</h1></span>
+                <p class="card-text third-text pt-3 fs-5">Forget about doing the scheduling process manually. With <span class="second-text">ResCot</span> your customer has total freedom to separate their appointment according to <span class="fw-bold">their availability.</span></p>
               </div>
             </div>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-6 col-md-4 pt-3">
             <div class="card">
-              <img class="card-img-top" src="images/tiempo.jpg" alt="tiempo">
+              <img class="card-img-top" src="images/reloj.png" alt="tiempo">
               <div class="card-body">
-                <h1>Free up your time</h1>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h1 class="text-center first-text pt-3">Free up <br><span class="second-text">your time</h1></span>
+                <p class="card-text third-text pt-3 fs-5">What would you do with <span class="fw-bold">2 or even 4 hours free in your day to day?</span> <br>
+                  <span class="second-text">ResCot</span> allows you to free up the time you invest in carrying out the quotation and scheduling process with your clients.</p>
               </div>
             </div>
           </div>
@@ -173,9 +177,9 @@
     <!--Demo-->
     <section id="demo" class="pt-3">
       <div class="row mt-2">
-        <div class="col text-center text-uppercase">
-          <small>how it's</small>
-          <h2>works?</h2>
+        <div class="col-12 text-center p-5">
+          <p class="first-text fw-bold fs-1">
+            How i'ts <span class="second-text text-center fs-1">works</span></p>
         </div>
       </div>
       <div class="container">

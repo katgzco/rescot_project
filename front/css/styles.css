@@ -17,6 +17,12 @@
   background-color: #365b6d;
   color: #41c1ba;
 }
+.first-text {
+  color: #365b6d;
+}
+.second-text {
+  color: #41c1ba;
+}
 
 #header img {
   width: 150px;
@@ -37,36 +43,18 @@
 #main .BlueColor {
   color: #41c1ba;
 }
-#main p {
+.third-text {
   color: #7d94ab;
 }
-/*sigUp*/
+/*features*/
 
-#sign-up .row {
-  height: 70vh;
+#features {
+  background-color: #f7f7f7;
 }
 
-#title-slogan {
-  background: -webkit-linear-gradient(#41c1ba, #365b6d);
-  color: #f7f7f7;
-  box-shadow: inset 0 0 10px 0 #41c1ba;
-  border-radius: 0 0 50px 0;
+#features .card {
+  background-color: #f7f7f7;
 }
-
-#form-sing-up input,
-#form-sing-up button {
-  box-shadow: 0 0 10px 0 #41c1ba;
-  border-radius: 0 10px 0 10px;
-  border: 0;
-  max-width: 70%;
-  margin-left: 20%;
-}
-
-#form-sing-up small {
-  max-width: 70%;
-  margin-left: 20%;
-}
-
 /*motivacion*/
 
 /*footer*/
