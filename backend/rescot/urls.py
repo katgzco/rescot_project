@@ -9,4 +9,5 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('api_quotation.urls')),
+    path('api/v1/calendar/', include('calendarApp.urls')),
 ]

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     # Local
     'api_quotation.apps.ApiQuotationConfig',
+    'calendarApp.apps.CalendarappConfig',
 
 ]
 
