@@ -30,79 +30,90 @@
               <div class="mb-4">
                 <h1 class="text-center">Quotation</h1>
               </div>
+              <!--Artist infomation-->
+              <h6 class="mb-2">Artist information</h6>
+              <div class="mb-3" id="artistInformation">
+                <!-- artistInfo -->
+              </div>
               <!-- Form -->
               <form>
-                <!--Artist infomation-->
-                <h6 class="mb-2">Artist information</h6>
-                <div class="mb-3" id="artistInformation">
-                  <!-- artistInfo -->
-                </div>
-                <!-- User Information -->
+              <!-- User Information -->
                 <h6 class="mb-2">Personal Information</h6>
                 <div class="mb-3" id="userInformation">
-                  <div class="row">
-                    <div class="col mb-2">
-                      <label for="userName" class="pb-0">Name</label>
-                      <input type="text" class="form-control" id="userName" placeholder="Your Name" required>
-                    </div>
-                  </div>
-                  <!-- phone number -->
-                  <div class="row">
-                    <div class="col mb-2">
-                      <label for="userPhone" class="pb-0">WhatsApp</label>
-                      <input type="tel" class="form-control" id="userPhone" pattern="3.+" minlength="10" maxlength="10" placeholder="3998887744" required>
-                      <small id="emailHelp" class="form-text text-muted ">We'll never share your phone-number with anyone else.</small>
-                    </div>
-                  </div>
-                  <!-- Email -->
-                  <div class="row">
-                    <div class="col mb-3">
-                      <label for="userMail" class="pb-0">Email</label>
-                      <input type="email" class="form-control" id="userMail"  pattern=".+@.+\.com" placeholder="name@example.com">
-                      <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
-                    </div>
+                <div class="row">
+                  <div class="col mb-2">
+                    <label for="userName" class="pb-0">Name</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Your Name" required>
                   </div>
                 </div>
-                <!--Quotation Information-->
+                <!-- phone number -->
+                <div class="row">
+                  <div class="col mb-2">
+                    <label for="userPhone" class="pb-0">WhatsApp</label>
+                    <input type="tel" class="form-control" id="userPhone" pattern="3.+" minlength="10" maxlength="10" placeholder="3998887744" required>
+                    <small id="emailHelp" class="form-text text-muted ">We'll never share your phone-number with anyone else.</small>
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="row">
+                  <div class="col mb-3">
+                    <label for="userMail" class="pb-0">Email</label>
+                    <input type="email" class="form-control" id="userMail"  pattern=".+@.+\.com" placeholder="name@example.com">
+                    <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
+                  </div>
+                </div>
+                </div>
+              <!--Quotation Information-->
                 <h6 class="mb-2">Quotation Information</h6>
                 <div class="mb-3">
                   <div class="row">
-                    <div class="col mb-3">
-                      <!--Styles-->
-                      <select id="selectStyle" class="form-select form-select-sm" aria-label="form-select-sm example" required>
-                      <!-- artistRenderStyles -->
-                      </select>
-                    </div>
-                    <div class="col mb-3">
-                      <!--Body part-->
-                      <select id="selectBody" class="form-select form-select-sm" aria-label=".form-select-sm example" required>
-                      <!-- artistRenderBody -->
-                      </select>
-                    </div>
-                    <div class="col mb-3">
-                      <!--Styles-->
-                      <select id="selectSize"class="form-select form-select-sm" aria-label=".form-select-sm example" required>
-                        <option disable hidden value="">Size</option>
-                        <option value="1-7">1-7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25-30">25-30</option>
-                      </select>
-                    </div>
+                  <div class="col mb-3">
+                    <!--Styles-->
+                    <select id="selectStyle" class="form-select form-select-sm" aria-label="form-select-sm example" required>
+                    <!-- artistRenderStyles -->
+                    </select>
+                  </div>
+                  <div class="col mb-3">
+                    <!--Body part-->
+                    <select id="selectBody" class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                    <!-- artistRenderBody -->
+                    </select>
+                  </div>
+                  <div class="col mb-3">
+                    <!--Styles-->
+                    <select id="selectSize"class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                      <option disable hidden value="">Size</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                    </select>
+                  </div>
                   </div>
                   <!--
                   <div class="row">
@@ -113,21 +124,25 @@
                   </div>-->
                   <div class="row">
                     <div class="mb-3">
-                      <label for="quotationDescription" class="form-label">Description of the tattoo</label>
-                      <textarea class="form-control" id="quotationDescription" rows="3"></textarea>
+                    <label for="quotationDescription" class="form-label">Description of the tattoo</label>
+                    <textarea class="form-control" id="quotationDescription"
+                    rows="3" placeholder="Please write a detailed description of what you would like, it is also important that you tell me what your favorite colors are."></textarea>
                     </div>
                   </div>
                   <!-- Button -->
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-rescot" id="makeQuote">
-                      Make quote
-                    </button>
+                  <button type="submit" class="btn btn-rescot" id="makeQuote">
+                    Make quote
+                  </button>
                   </div>
                 </div>
-                <section id="secctionQuoteResult">
-                  <!-- quoteResult -->
-                </section>
               </form>
+              <section id="secctionQuoteResult">
+                <!-- quoteResult -->
+              </section>
+              <section id="secctionAgenda" class="mb-5 pb-5">
+                <!-- Agenda-->
+              </section>
             </div>
           </div>
         </div>
