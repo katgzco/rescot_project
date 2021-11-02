@@ -17,6 +17,16 @@
   background-color: #365b6d;
   color: #41c1ba;
 }
+
+.btn-rescot2 {
+  background-color: #365b6d;
+  color: #f7f7f7;
+}
+
+.btn-rescot2:hover {
+  background-color: #41c1ba;
+  color: #f7f7f7;
+}
 .first-text {
   color: #365b6d;
 }
@@ -68,10 +78,6 @@
 #footer a {
   color: white;
 }
-
-/*#team {
-  background-color: #365b6d;
-}*/
 
 .card {
   border: 0;
@@ -173,4 +179,22 @@
 #quoteResult {
   background-color: #1c364357;
   border-radius: 0 15px 0 15px;
+}
+/*Agenda*/
+
+#availability .form-check {
+  border-radius: 10px 10px 10px 10px;
+}
+#availability .form-check label {
+  color: #f7f7f7;
+}
+
+#availability .form-check-input {
+  background-color: #7d94ab;
+  margin-left: 0;
+  box-shadow: none;
+}
+#availability .form-check-input:hover {
+  background-color: #365b6d;
+  margin-left: 0;
 }
