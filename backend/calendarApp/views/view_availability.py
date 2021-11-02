@@ -75,7 +75,7 @@ def list_availability(request):
     if not events:
         for i in range(0, finalHour - startHour):
             if i + time_event <= (finalHour - startHour):
-                list_response.append(str((startHour + 5) + i) + ':00')
+                list_response.append(str((startHour - 5) + i) + ':00')
         return JsonResponse(
             list_response,
             status=status.HTTP_201_CREATED,
