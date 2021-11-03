@@ -14,10 +14,11 @@ const makeQuote = document.getElementById("makeQuote");
 const secctionQuoteResult = document.getElementById("secctionQuoteResult");
 const checkAvailability = document.getElementById("checkAvailability")
 let hourDate = ""
+const ipServer = "http://18.231.119.143"
 
 //Obtener la lista de los artistas
 async function getDataArtist() {
-  let url = "http://18.230.82.177/api/v1/artists/"
+  let url = `${ipServer}/api/v1/artists/`
   try {
     const respuesta = await fetch(url);
     if (respuesta.status === 200) {
@@ -31,7 +32,7 @@ async function getDataArtist() {
 
 // seleccionar  y renderizar la informacion del artista
 async function renderArtist() {
-  let url = `http://18.230.82.177/api/v1/artists/${listArtist[0].id}`;
+  let url = `${ipServer}/api/v1/artists/${listArtist[0].id}`;
   try {
     let response = await fetch(url);
     if (response.status === 200) {
@@ -101,7 +102,7 @@ async function sendDataQuotation(event) {
     }
   }
 
-  const url = "http://18.230.82.177/api/v1/quotation/create";
+  const url = `${ipServer}/api/v1/quotation/create`;
   let response = await fetch(url, {
     "method": "POST",
     "headers": {
@@ -169,7 +170,7 @@ function renderAgenda() {
 async function sendDateAgenda(event) {
   //event.preventDefault();
   let [year, month, day] = getDateAgenda();
-  const urlAvailability = "http://18.230.82.177/api/v1/calendar/availability"
+  const urlAvailability = `${ipServer}/api/v1/calendar/availability`
   const dataAvailability = {
     "year": year,
     "month": month,
@@ -245,7 +246,7 @@ function checkHour(obj) {
 async function createDate(event) {
   event.preventDefault();
   let [year, month, day] = getDateAgenda();
-  const urlCreateDate = "http://18.230.82.177/api/v1/calendar/creation"
+  const urlCreateDate = `${ipServer}/api/v1/calendar/creation`
   const dataCreateDate = {
     "year": year,
     "month": month,
