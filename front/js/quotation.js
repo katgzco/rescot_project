@@ -14,7 +14,7 @@ const makeQuote = document.getElementById("makeQuote");
 const secctionQuoteResult = document.getElementById("secctionQuoteResult");
 const checkAvailability = document.getElementById("checkAvailability")
 let hourDate = ""
-const ipServer = "http://18.231.119.143"
+const ipServer = "http://18.230.82.177"
 
 //Obtener la lista de los artistas
 async function getDataArtist() {
