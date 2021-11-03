@@ -13,6 +13,7 @@ let responseQuotation = {}
 const makeQuote = document.getElementById("makeQuote");
 const secctionQuoteResult = document.getElementById("secctionQuoteResult");
 const checkAvailability = document.getElementById("checkAvailability")
+let hourDate = ""
 
 //Obtener la lista de los artistas
 async function getDataArtist() {
@@ -121,7 +122,7 @@ async function sendDataQuotation(event) {
 function renderQuotation(dataQuotation) {
   //let responseQuotation = JSON.parse(dataQuotation);
   const quotationInfo = `
-  <h6 class="mb-4 text-center fs-1" focus>Quote Result</h6>
+  <h1 class="mb-4 text-center fs-1 first-text" focus>Quote Result</h1>
   <div class="mb-3 px-3" id="quoteResult">
     <div class="row py-3">
       <div class="col-12 col-md-6 mb-1">
@@ -143,12 +144,12 @@ function renderQuotation(dataQuotation) {
 /*Agenda */
 function renderAgenda() {
   const agendaInfo = `
-  <h6 class="mb-4 text-center fs-1">Agenda</h6>
+  <h1 class="mb-4 text-center fs-1 first-text">Agenda</h1>
   <div class="mb-3 px-3">
     <div class="row" >
       <div class="col mb-2">
         <label for="chooseDate" class="pb-0">Select a date</label>
-        <input type="date" class="form-control" id="chooseDate"pattern="3.+" minlength="10" maxlength="10" placeholder="3998887744" required>
+        <input type="date" class="form-control" id="chooseDate" required>
       </div>
       <div class="col mb-2 d-grid gap-1 pb-3 pt-3">
         <button type="submit" onclick="sendDateAgenda()" class="btn btn-lg btn-rescot" id="checkAvailability">Check Availability</button>
@@ -167,8 +168,8 @@ function renderAgenda() {
 
 async function sendDateAgenda(event) {
   //event.preventDefault();
-  const urlAvailability = "http://18.230.82.177/api/v1/calendar/availability"
   let [year, month, day] = getDateAgenda();
+  const urlAvailability = "http://18.230.82.177/api/v1/calendar/availability"
   const dataAvailability = {
     "year": year,
     "month": month,
@@ -196,33 +197,87 @@ function getDateAgenda() {
 }
 
 function renderAvailability(obj) {
-  console.log(obj)
   let availabilityInfo = obj.map((hour, indice) => `
-  <button type="submit" class="form-check p-1 btn btn-lg btn-rescot2 m-2 hour-cls" onclick="sendDateHour()">
-    <input class="form-check-input" type="radio" name="${hour}" id="${hour}"
-    value="${hour}">
-    <label class="form-check-label fs-6" for="${hour}">
-    ${hour}
-    </label>
-  </button>`).join("");
+  <button type="button" class="p-1 btn btn-lg btn-rescot2 m-2 hour-cls"
+  value=${hour} data-bs-toggle="modal" data-bs-target="#exampleModal">
+    ${hour}</button>
+`).join("");
   const availability = document.getElementById("availability");
   availability.innerHTML = availabilityInfo;
-}
-
-function sendDateHour() {
-  let listHours = document.getElementsByClassName("hour-cls")
-  arrayHours = Array.from(listHours)
-  console.log(arrayHours)
-  /*arrayHours.filter(function (value, index, array) {
-    if (value.children[0].checked === true) {
-      console.log(value.children[0].checked);
-      console.log(value);
-      return value;
-    }
+  const hours = document.querySelectorAll(".hour-cls");
+  hours.forEach(boton => {
+    boton.addEventListener("click", confirmDateHour)
   })
 
-  //listHours[1].children[0].checked)*/
+}
 
+function confirmDateHour(event) {
+  event.preventDefault();
+  let [year, month, day] = getDateAgenda();
+  const confirmModal = `
+  <p id="contentModal">
+  Your appointment with <span class="fw-bold fs-5">${artist.name}</span> will
+  be scheduled on the <span class="fw-bold fs-5">${day}th</span> day of the
+  <span class="fw-bold fs-">${month}th</span> month of the year
+  <span class="fw-bold fs-5">${year}</span> at <span class="fw-bold fs-5">${this.value}.</span>
+  <br>
+  Remember that the session will last approximately <span class="fw-bold fs-5">${responseQuotation.time}</span>
+  <br>
+  To confirm click on schedule.
+  </p>`;
+  let modalBody = document.getElementById("modalBody")
+  modalBody.innerHTML = confirmModal;
+  let modalSchedule = document.getElementById("modalSchedule")
+  modalSchedule.addEventListener("click", createDate)
+  hourDate = checkHour(this.value);
+}
+
+function checkHour(obj) {
+  let hour = obj.split(":")
+  let fixHour = "";
+  if (hour[0].length < 2) {
+    fixHour = "0".concat("", hour[0])
+    hour[0] = fixHour;
+  }
+  return hour.join(":")
+}
+
+async function createDate(event) {
+  event.preventDefault();
+  let [year, month, day] = getDateAgenda();
+  const urlCreateDate = "http://18.230.82.177/api/v1/calendar/creation"
+  const dataCreateDate = {
+    "year": year,
+    "month": month,
+    "day": day,
+    "total_time": responseQuotation.max_time,
+    "quotation_id": responseQuotation.id_quotation,
+    "time_event": hourDate,
+  }
+  console.log(dataCreateDate)
+  const responseCreateDate = await fetch(urlCreateDate, {
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+    },
+    "body": JSON.stringify(dataCreateDate)
+  })
+    .then((response) => response.json())
+    .catch((razon) => {
+      console.log("enviar datos 'dataCreateDate' fallo, razon:", razon);
+    });
+  renderCreateDate(responseCreateDate)
+}
+
+function renderCreateDate(obj) {
+  const availability = document.getElementById("availability");
+  const responseCreateDate = `
+  <p id="emailHelp">
+  <h1 class="fw-bold text-center first-text">${obj.message}!</h1><br>
+  Remember that in your email and your calendar you will find all the information of the appointment.
+  </p>
+  `
+  availability.innerHTML = responseCreateDate;
 }
 
 getDataArtist();

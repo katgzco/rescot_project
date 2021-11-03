@@ -33,6 +33,9 @@
 .second-text {
   color: #41c1ba;
 }
+.third-text {
+  color: #7d94ab;
+}
 
 #header img {
   width: 150px;
@@ -53,9 +56,7 @@
 #main .BlueColor {
   color: #41c1ba;
 }
-.third-text {
-  color: #7d94ab;
-}
+
 /*features*/
 
 #features,
@@ -172,9 +173,6 @@
   font-size: larger;
   color: #4e5355;
 }
-#card-quotation h1 {
-  color: #4e5355;
-}
 
 #quoteResult {
   background-color: #1c364357;
@@ -194,7 +192,15 @@
   margin-left: 0;
   box-shadow: none;
 }
+/*content Modal*/
+
+#contentModal {
+  font-size: larger;
+  color: #4e5355;
+}
+
+/*.form-check-input:checked
 #availability .form-check-input:hover {
   background-color: #365b6d;
   margin-left: 0;
-}
+}*/
