@@ -14,6 +14,7 @@ const makeQuote = document.getElementById("makeQuote");
 const secctionQuoteResult = document.getElementById("secctionQuoteResult");
 const checkAvailability = document.getElementById("checkAvailability")
 let hourDate = ""
+
 const ipServer = "https://api2.rescot.systems"
 
 //Obtener la lista de los artistas
