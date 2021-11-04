@@ -44,13 +44,16 @@ class Quotation(BaseModel):
     def time_estimator(self):
         cm2 = self.size
         if cm2 <= 7:
-            estimated_time = '1 hora'
+            estimated_time = '1 hour'
+            max_time = '1'
         elif cm2 <= 15:
-            estimated_time = 'Entre 3 y 4 horas'
+            estimated_time = 'Between 3 to 4 hours'
+            max_time = '4'
         else:
-            estimated_time = 'Entre 5 y 6 horas'
+            estimated_time = 'Between 5 to 6 hours'
+            max_time = '6'
 
-        return str(estimated_time)
+        return [estimated_time, max_time]
 
     def price_estimator(self, artist_id):
         cm2 = self.size

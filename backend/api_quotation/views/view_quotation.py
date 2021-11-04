@@ -63,7 +63,7 @@ def quote_creation(request):
             quotation_instance = quotation_serializer.save(fk_user=user_instance, fk_artist=artist_query)
             time_cm2 = quotation_instance.time_estimator()
             price_cm2 = quotation_instance.price_estimator(artist_id)
-            dict_ = {"price" : price_cm2, "time" : time_cm2}
+            dict_ = {"price" : price_cm2, "time" : time_cm2[0], "max_time" : time_cm2[1], "id_quotation": quotation_instance.id}
             return JsonResponse(
                                 dict_,
                                 status=status.HTTP_201_CREATED,
